@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>B.Y Solutions</title>
+		<style>
+		li {
+		text-transform: capitalize;
+		
+		}
+
+
+		</style>
+		
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+			integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+			crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+			integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+			crossorigin="anonymous"></script>	
+
+		<meta charset="utf-8">
+		<script>
+		var getParams = function (url) {
+				var params = {};
+				var parser = document.createElement('a');
+				parser.href = url;
+				var query = parser.search.substring(1);
+				var vars = query.split('&');
+				for (var i = 0; i < vars.length; i++) {
+					var pair = vars[i].split('=');
+					params[pair[0]] = decodeURIComponent(pair[1]);
+				}
+				return params;
+			};
+		</script>
+		<title>B.Y IT solutions</title>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+
+		<!-- animate -->
+		<link rel="stylesheet" href="css/animate.min.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- magnific pop up -->
+		<link rel="stylesheet" href="css/magnific-popup.css">
+		<!-- font-awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- google font -->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+		<!-- custom -->
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+
+		<!-- start navigation -->
+		<div class="navbar navbar-fixed-top navbar-default" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand"><img src="images/logo.png" class="img-responsive" alt="logo"></a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home" class="smoothScroll">HOME</a></li>
+						<li><a href="#about" class="smoothScroll">PROGRESS</a></li>
+						<li><a href="#pricing" class="smoothScroll">SERVICES</a></li>
+						<li><a href="#contact" class="smoothScroll">CONTACT</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- end navigation -->
+
+		<!-- start home -->
+		<section id="home" class="text-center">
+		  <div class="templatemo_headerimage">
+		    <div class="flexslider">
+		      <ul class="slides">
+		        <li>
+		        	<img src="images/slider/1.jpg" alt="Slide 1">
+		        	<div class="slider-caption">
+					    <div class="templatemo_homewrapper">
+					      <h1 class="wow fadeInDown" data-wow-delay="2000">Welcome Back </h1><h1 class="wow fadeInDown" data-wow-delay="2000" id="name"></h1>
+					      <h2 class="wow fadeInDown" data-wow-delay="2000">
+							<span>Check the progress of your solution here</span>
+						</h2>
+						<a href="#about" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">Progress</a>	
+					    </div>
+				  	</div>
+		        </li>
+		        <li>
+		        	<img src="images/slider/2.jpg" alt="Slide 2">
+		        	<div class="slider-caption">
+					    <div class="templatemo_homewrapper">
+					      <h1 class="wow fadeInDown" data-wow-delay="2000">Innovative IT Solutions</h1>
+					      <h2 class="wow fadeInDown" data-wow-delay="2000">
+							<span>Find Out More Additional services Here</span>
+						</h2>
+						<a href="#pricing" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">Our Products</a>	
+					    </div>
+				  	</div>
+		        </li>
+		      </ul>
+		    </div>
+		  </div>				
+		</section>
+		<!-- end home -->
+<script>
+
+
+</script>
+		<!-- start about -->
+		<div id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.9s">
+						<h3>Your Solutions are building</h3>
+						<h4>Your projects are in good hands</h4>
+						<p>Best Solutions for your needs.
+						 Specialized IT solutions catered to understand employee performance and enhance business capabilities.
+						  </p>
+					</div>
+					<div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.9s">
+						<div id="solutionProducts">	
+										
+
+						<!--To edit change the width of the progress bar <button  class="btn btn-warning" type='button'>More Info</button>-->
+
+				
+						</div>
+
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end about -->
+		<!-- Updating Product Project -->
+		<script>
+
+		var data = getParams(window.location.href);
+		sessionStorage.setItem("username",data.user);
+		username = sessionStorage.getItem("username")
+		$('#name').append(data.user);
+		//console.log(username)
+		function showError(message) {
+
+			}
+		$(async() => {           
+			// Change serviceURL to your own
+			var serviceURL = "http://13.250.108.137:8000/handleorders/productprogress/" + username ;
+
+			  try {
+            const response =
+             await fetch(serviceURL, { method: 'GET' });
+            const data = await response.json();
+
+           var userbookings = data.UserBookings
+            if (!userbookings || !userbookings.length) {
+               
+
+            } else {
+	
+						var printrow ='' 
+			
+                // for loop to setup all table rows with obtained book data
+                for (const ubooks of userbookings) {
+				
+						var printrow = 
+						"<span><h4>Booking ID " + ubooks.bookingID + ":</h4><b>Start Date :</b><i>" + ubooks.projStartDate +  "</i><br><b>End Date :</b><i>  " + ubooks.projEndDate + "</i><small> " + ubooks.productProgress  + "%</small></span><div class='progress'><div class='progress-bar progress-bar-danger' role='progressbar' aria-valuenow=' " + ubooks.productProgress +  "' aria-valuemin='0' aria-valuemax='100' style='width:" + 
+						ubooks.productProgress.toString()+"%;'></div></div><a class='linkstyle' href='moreinfo.php?bookingID="+
+						ubooks.bookingID +"' target='_blank'>More Info</a>";
+
+						printrow = "<div style='padding-bottom:20px;' class='w3-panel w3-card-2'>"+printrow+"</div>";
+					// append here 
+					$("#solutionProducts").append(printrow);
+                }
+
+            }
+        } catch (error) {
+            showError
+            ('There is a problem retrieving books data, please try again later.<br />'+error);
+                } 
+		});
+
+
+
+		</script>
+		<!-- start divider -->
+		<div id="divider">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-1 col-sm-1"></div>
+					<div class="col-md-8 col-sm-8">
+						<h2 class="wow bounce">We provide <strong>solutions</strong></h2>
+						<h3 class="wow fadeIn" data-wow-delay="0.6s"><mark>
+						Innovative</mark> Team &amp; <mark>Talented</mark> Developers</h3>
+						<p class="wow fadeInUp" data-wow-delay="0.9s">B.Y Solutions prioritize helping our customers adapt and take lead in this technological revolution. We modernize IT, optimize data architectures, focus on scalable and orchestrated services and functions, targetting business needs and compliant with top industry standards.</p>
+					</div>
+					<div class="col-md-2 col-sm-2"></div>
+				</div>
+			</div>
+		</div>
+		<!-- end divider -->
+		
+		<script>
+
+			$(async() => {  
+
+
+					var serviceURL = "http://13.250.108.137:8000/product/product";
+							  
+					try {
+						const response =
+                 await fetch(serviceURL, { method: 'GET' } );
+						const allProduct = await response.json();
+						var allProducts = allProduct.product;
+						console.log(allProducts);
+					} catch (error) {
+					   console.error(error);
+					}
+
+					function onlyUnique(value, index, self) { 
+						return self.indexOf(value) === index;
+					}
+					String.prototype.capitalize = function() {
+							return this.charAt(0).toUpperCase() + this.slice(1);
+						}
+
+				  var mainCategory = []
+				    for (const product of allProducts) {
+
+						mainCategory.push(product.productcat)
+
+					}
+
+					mainCategory = mainCategory.filter(onlyUnique);
+
+					console.log(mainCategory)
+
+					for(const mainCat in mainCategory){
+
+								category = mainCategory[mainCat];
+								var serviceURL = "http://13.250.108.137:8000/product/product/" + category;
+									
+							var eachCatData = '';
+
+							try {
+								const response = await fetch(serviceURL, { method: 'GET' } );
+								const data = await response.json();
+								eachCatData = data.products;
+							} catch (error) {
+							console.error(error);
+							}
+							// in each main category
+							var headertobody = "<div class='col-sm-6 col-md-3 wow fadeInLeft' data-wow-delay='0.6s'><div style='height:100%' class='plan plan_one'>";
+							headertobody = headertobody + "<h4 class='plan_title'>"+ category +"</h4><ul style='height:20%; table-layout:fixed'>"
+
+							for(const item in eachCatData){
+								
+								// each loop we append a li 
+								itemObject = eachCatData[item]
+								headertobody += "<li>" + itemObject.productsubcat + " "+ itemObject.productname + "   :   $" + itemObject.price + "</li>";
+
+							}
+						
+						var buttonid = category + "btn"
+						headertobody = headertobody + "</ul><a style='' href='./order.html?productcat="+category+"'><button id=" + buttonid +" class='btn btn-warning'>ORDER NOW</button></a></div></div>"
+						$("#categories").append(headertobody);
+
+
+					}
+
+
+
+				});
+
+
+				
+		</script>
+
+		<!-- start pricing -->
+		<div id="pricing" class="text-center">
+			<div class="container">
+				<div id='categories' class="row">
+							<div class="col-md-12 wow bounce">
+								<h2>Services</h2>
+							</div>
+							
+				</div>
+			</div>
+		</div>
+		
+
+		<!-- start contact -->
+		<div id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-4 wow fadeInLeft" data-wow-delay="0.6s">
+						<h2><strong>B.Y</strong> Solutions</h2>
+						<p>Contact us for futher information and we will cater to your needs.</p>
+						<ul class="social-icon">
+							<li><a href="#" class="fa fa-facebook"></a></li>
+							<li><a href="#" class="fa fa-twitter"></a></li>
+							<li><a href="#" class="fa fa-instagram"></a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 col-sm-4 wow fadeIn" data-wow-delay="0.9s">
+						<address>
+							<h3>Visit Office</h3>
+							<p><i class="fa fa-map-marker too-icon"></i>81 Victoria St, Singapore 188065</p>
+							<p><i class="fa fa-phone too-icon"></i> +65 8522 9843</p>
+							<p><i class="fa fa-envelope-o too-icon"></i> hello@BY.com</p>
+						</address>
+					</div>
+					<form action="#" method="post" class="col-md-6 col-sm-4" id="contact-form" role="form">
+							<div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
+								<input name="name" type="text" class="form-control" id="name" placeholder="Name">
+							</div>
+							<div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
+								<input name="email" type="email" class="form-control" id="email" placeholder="Email">
+							</div>
+							<div class="col-md-12 col-sm-12 wow fadeIn" data-wow-delay="0.9s">
+								<textarea name="message" rows="5" class="form-control" id="message" placeholder="Message"></textarea>
+							</div>
+							<div class="col-md-offset-9 col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+								<input name="submit" type="submit" class="form-control" id="submit" value="Send">
+							</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- end contact -->
+		
+		<!-- start google map -->
+		<div class="google_map">
+			<div id="map-canvas"></div>
+		</div>
+		<!-- end google map -->
+
+		<!-- start footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-7">
+						<p>Copyright &copy; 2020 B.Y Company</p>
+					</div>
+					<div class="col-md-4 col-sm-5">
+						<ul class="social-icon">
+							<li><a href="#" class="fa fa-facebook"></a></li>
+							<li><a href="#" class="fa fa-twitter"></a></li>
+							<li><a href="#" class="fa fa-instagram"></a></li>
+							<li><a href="#" class="fa fa-pinterest"></a></li>
+							<li><a href="#" class="fa fa-google"></a></li>
+							<li><a href="#" class="fa fa-github"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- end footer -->
+
+
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		<!-- bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- isotope -->
+		<script src="js/isotope.js"></script>
+		<!-- images loaded -->
+   		<script src="js/imagesloaded.min.js"></script>
+   		<!-- wow -->
+		<script src="js/wow.min.js"></script>
+		<!-- smoothScroll -->
+		<script src="js/smoothscroll.js"></script>
+		<!-- jquery flexslider -->
+		<script src="js/jquery.flexslider.js"></script>
+		<!-- Magnific Pop up -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<!-- custom -->
+		<script src="js/custom.js"></script>
+		<style type='text/css'>
+		
+		#linkstyle a:link, a:visited {
+			background-color: #f44336;
+			color: white;
+			padding: 14px 25px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			}
+
+		#linkstyle a:hover, a:active {
+			background-color: red;
+			}
+		</style>
+	</body>
+</html>

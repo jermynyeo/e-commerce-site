@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Registration V6</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+		crossorigin="anonymous"></script>
+		
+</head>
+<body>
+	<div class="limiter" >
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-85 p-b-20">
+				<form class="login100-form validate-form">
+					<span id="crowd">
+						B.Y Solutions
+					</span> 
+					<ul id="Errors" style="margin-top:50px;" class="login-more"></ul>
+					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
+						<input class="input100" type="text" name="username" id="username">
+						<span class="focus-input100" data-placeholder="Username"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+						<input class="input100" type="password" name="password" id="password">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter Company Name">
+						<input class="input100" type="companyName" name="companyName" id="companyName">
+						<span class="focus-input100" data-placeholder="Company Name"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-50" data-validate="Enter Company Name">
+						<input class="input100" type="email" name="email" id="email">
+						<span class="focus-input100" data-placeholder="Email"></span>
+
+                    </div>
+                    
+					<div class="container-login100-form-btn">
+						<input id="register" type="submit" class="login100-form-btn" value="Register">
+						
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	<script>
+
+		$(document).ready(function(){
+				})
+
+				function showError(message) {
+                // Display an error under the main container
+				$('#Errors').empty();
+                $('#Errors')
+                    .append("<li style='color:red;'>" + message + "</li>");
+            }
+			function showSuccess(message) {
+                // Display an error under the main container
+				$('#Errors').empty();
+                $('#Errors')
+                    .append("<li style='color:green;'>" + message + "</li>");
+            }
+		$('#register').click(async (event) => {
+		//Prevents screen from refreshing when submitting
+  
+		event.preventDefault();
+		
+		var username = $('#username').val();
+		var password = $('#password').val();
+		var companyName = $('#companyName').val();
+		var email = $('#email').val();
+		var serviceURL = "http://13.250.108.137:8000/customer/user/" + username;
+		
+		try {
+				const response = await fetch(
+					serviceURL, {
+					method: 'POST',
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({ "password": password, 
+					"companyName": companyName, "email": email }),
+					mode: 'cors'
+					});
+                    data = await response.json();
+					//console.log(data['message'])
+					message = data['message'];
+					success = data['success'];
+                } catch (error) {
+                    console.error(error);
+                }
+
+				if(message){
+					showError(message)
+				}
+				if(success){
+					document.location.href="./app.html" + "?message=" + success;
+				}
+		
+		
+		})
+		</script>
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+		li {
+  text-transform: capitalize;
+  
+  }
+
+    #page-container {
+      position: relative;
+      min-height: 100vh;
+    }
+
+    #content-wrap {
+      padding-bottom: 2.5rem;    /* Footer height */
+    }
+
+    #footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2.5rem;            /* Footer height */
+    }
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+			integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+			crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+			integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+			crossorigin="anonymous"></script>	
+
+		<meta charset="utf-8">
+			
+		<title>B.Y IT solutions</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+
+		<!-- animate -->
+		<link rel="stylesheet" href="css/animate.min.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- magnific pop up -->
+		<link rel="stylesheet" href="css/magnific-popup.css">
+		<!-- font-awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- google font -->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+		<!-- custom -->
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+
+		
+
+  <div id="page-container">
+      <div id="content-wrap">
+      <!-- all other page content -->
+		<!-- start navigation -->
+		<div class="navbar navbar-fixed-top navbar-default" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand"><img src="images/logo.png" class="img-responsive" alt="logo"></a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home" class="smoothScroll">HOME</a></li>
+						<li><a href="#about" class="smoothScroll">PROGRESS</a></li>
+						<li><a href="#pricing" class="smoothScroll">SERVICES</a></li>
+						<li><a href="#contact" class="smoothScroll">CONTACT</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- end navigation -->
+    <!-- start cart -->
+		<div id="about" style="padding-bottom:0px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 wow fadeInLeft">
+						<h3 id="name"></h3>
+						<h4>Your projects are in good hands</h4>
+						<p>Best Solutions for your needs.
+						 Specialized IT solutions catered to understand employee performance and enhance business capabilities.
+						  </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end cart -->
+  <!-- product table -->
+  			<form action='order_confirmation.php' method = 'GET'>
+			<div class="container" >
+				<div class="row">
+
+					<div id='itemsCards' style='width:100%;' class="col-md-6 col-sm-9 wow fadeInLeft" data-wow-delay="0.9s"></div>
+
+					</div>	
+    			<div class="col-md-6 col-sm-9 wow fadeInRight" data-wow-delay="0.9s">
+					<!--document.querySelectorAll('input[type="checkbox"]:checked').length 
+					<p style='margin-left:65%; margin-top:10%;'><i>Total Value</i> |$ <b id='total'>0.00</b></p>-->	
+					<input id='checkingoutbutton' style='margin-left:80%; margin-top:2%;' type='image' class="img-responsive" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" value="checkout to pay"></div>
+				</div>
+			</form>	
+			</div>
+
+			 
+		<!-- product table  -->
+	</br></br></br>
+  </div>
+   	<!-- start footer -->
+		<footer id='footer'>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-7">
+						<p>Copyright &copy; 2020 B.Y Company</p>
+					</div>
+					<div class="col-md-4 col-sm-5">
+						<ul class="social-icon">
+							<li><a href="#" class="fa fa-facebook"></a></li>
+							<li><a href="#" class="fa fa-twitter"></a></li>
+							<li><a href="#" class="fa fa-instagram"></a></li>
+							<li><a href="#" class="fa fa-pinterest"></a></li>
+							<li><a href="#" class="fa fa-google"></a></li>
+							<li><a href="#" class="fa fa-github"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+ </div>
+
+
+ <script>
+      var getParams = function (url) {
+      var params = {};
+      var parser = document.createElement('a');
+      parser.href = url;
+      var query = parser.search.substring(1);
+      var vars = query.split('&');
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        params[pair[0]] = decodeURIComponent(pair[1]);
+      }
+      return params;
+    };
+	// info of url x : y
+    var data = getParams(window.location.href);
+	
+	// y
+    //console.log(data.productcat);
+    var product = data.productcat;
+		$('#itemsCards').append(data.productcat);
+
+	// Do not touch 
+ $(async() => {  
+      
+			var length = document.querySelectorAll('input[type="checkbox"]:checked').length;
+			if(length < 1){
+				$("checkingoutbutton").attr("disabled", true)
+			}
+
+            var serviceURL = "http://13.250.108.137:8000/product/product/"+product;
+
+            try {
+              const response =
+                   await fetch(serviceURL, { method: 'GET', mode: "cors" } );
+              const data = await response.json();
+              var products = data.products;
+
+              if (!products || !products.length) {
+                  showError('No products available for this product category! Cause of coronavirus all our stocks have been cleared. Have you tried Accenture? :o')
+              } else {
+
+                  var rows = "";
+                  var price = 0;
+                  var product_array = [];
+                  function onlyUnique(value, index, self) { 
+						return self.indexOf(value) === index;
+					}
+					String.prototype.capitalize = function() {
+							return this.charAt(0).toUpperCase() + this.slice(1);
+						}
+
+				  var subcategory = []
+				    for (const product of products) {
+
+						subcategory.push(product.productsubcat)
+
+					}
+
+					subcategory = subcategory.filter(onlyUnique);
+
+					var i = 1;
+
+					for (const x of subcategory){
+						rows = '';
+					
+						var toph3 =  "<h3>" + x.capitalize() + "</h3>" + "<ul id='projects' class='w3-ul w3-card-4' style='width:50%'>"
+
+					for (const product of products) {
+
+
+
+						if(x == product.productsubcat){
+
+							var productValues = encodeURI(product.productname.toString()+","+product.productid.toString()+","+product.price.toString()+","+"SGD"+","+"1");
+							i++;
+
+								if(product.quantity > 0){
+										toph3 +=
+								"<li><label><input class='itemcheck' type = 'checkbox' name='productSelected[]' value="+productValues+" price="+product.price+" ></label>" 
+								+ product.productname  +  " <b style='float:right; margin-right:10px;'>$"
+								+  product.price
+								+ " </b> </li>"
+                          	
+								}	
+
+
+						}
+
+                 	 }
+
+						toph3 += "</h3></ul>";
+						rows += "<div>" + toph3 + "</div>";
+						// append li to row and then to div 
+						// console.log(rows);
+					  	$('#itemsCards').append(rows);
+
+
+					}
+
+				
+
+              }
+            } catch (error) {
+               console.error(error);
+            }
+      
+          });
+
+
+
+    </script>
+ 
+ <script>
+
+// call onload or in script segment below form
+function attachCheckboxHandlers() {
+    // get reference to element containing toppings checkboxes
+    var el = document.getElementById('projects');
+
+    // get reference to input elements in toppings container element
+    var tops = el.getElementsByTagName('input');
+    
+    // assign updateTotal function to onclick property of each checkbox
+    for (var i=0, len=tops.length; i<len; i++) {
+        if ( tops[i].type === 'checkbox' ) {
+            tops[i].onclick = updateTotal;
+        }
+    }
+}
+    
+// called onclick of toppings checkboxes
+function updateTotal(e) {
+    // 'this' is reference to checkbox clicked on
+    var form = this.form;
+    
+    // get current value in total text box, using parseFloat since it is a string
+    var val = parseFloat( form.elements['total'].value );
+    
+    // if check box is checked, add its value to val, otherwise subtract it
+    if ( this.checked ) {
+        val += parseFloat(this.value);
+    } else {
+        val -= parseFloat(this.value);
+    }
+    
+    // format val with correct number of decimal places
+    // and use it to update value of total text box
+    form.elements['total'].value = formatDecimal(val);
+}
+    
+// format val to n number of decimal places
+// modified version of Danny Goodman's (JS Bible)
+function formatDecimal(val, n) {
+    n = n || 2;
+    var str = "" + Math.round ( parseFloat(val) * Math.pow(10, n) );
+    while (str.length <= n) {
+        str = "0" + str;
+    }
+    var pt = str.length - n;
+    return str.slice(0,pt) + "." + str.slice(pt);
+}
+
+// in script segment below form
+attachCheckboxHandlers();
+
+
+	var checkBoxs = document.getElementsByClassName('.itemcheck');
+		if(checkBox.checked == true){
+
+
+			console.log("HEHEEHE");
+
+		}
+
+ 
+
+	$(".itemcheck").click(function(){
+
+	var length = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+	if(length < 1){
+		$("checkingoutbutton").attr("disabled", true);
+	}
+
+
+
+	});
+
+
+	</script>
+
+	
+		<!-- end footer -->
+
+
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		<!-- bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- isotope -->
+		<script src="js/isotope.js"></script>
+		<!-- images loaded -->
+   		<script src="js/imagesloaded.min.js"></script>
+   		<!-- wow -->
+		<script src="js/wow.min.js"></script>
+		<!-- smoothScroll -->
+		<script src="js/smoothscroll.js"></script>
+		<!-- jquery flexslider -->
+		<script src="js/jquery.flexslider.js"></script>
+		<!-- Magnific Pop up -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<!-- custom -->
+		<script src="js/custom.js"></script>
+
+	</body>
+</html>

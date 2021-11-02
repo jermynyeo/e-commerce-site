@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>B.Y Solutions</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+    <style type='text/css'>
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <script src="js/tabsSearch.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--Product Pie Progress-->
+<link rel="stylesheet" href="/progressBar/dist/css/asPieProgress.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="path/to/jquery-asPieProgress.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr td div").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+$('#bookingBtn').click(async(event) => {           
+			// Change serviceURL to your own
+			var username = $('#bookingtxt').val();
+
+			var serviceURL = "http://13.250.108.137:8000/handleorders/productprogress/" + username ;
+			  try {
+            const response =
+             await fetch(serviceURL, { method: 'GET' });
+            const data = await response.json();
+
+           var userbookings = data.UserBookings
+            if (!userbookings || !userbookings.length) {
+               
+
+            } else {
+	
+						var printrow ='' 
+			
+                // for loop to setup all table rows with obtained book data
+                for (const ubooks of userbookings) {
+				
+						var printrow = 
+						"<span><h4>Booking ID " + ubooks.bookingID + ":</h4><b>Start Date :</b><i>" + ubooks.projStartDate +  "</i><br><b>End Date :</b><i>  " + ubooks.projEndDate + "</i><small> " + ubooks.productProgress  + "%</small></span><div class='progress'><div class='progress-bar progress-bar-danger' role='progressbar' aria-valuenow=' " + ubooks.productProgress +  "' aria-valuemin='0' aria-valuemax='100' style='width:" + ubooks.productProgress.toString()+"%;'></div></div><a class='linkstyle' href='moreinfo.php?bookingID="+ubooks.bookingID +"' target='_blank'>More Info</a>";
+
+					// append here 
+					$("#solutionProducts").append(printrow);
+                }
+
+            }
+        } catch (error) {
+            showError
+            ('There is a problem retrieving books data, please try again later.<br />'+error);
+                } 
+		});
+
+</script>
+
+</head>
+<body>
+	<p id='crowd' style='padding-top:30px;'>
+		B.Y Solutions
+	</p> 
+<div class="navbar">
+  <a   href="#"><i class="fa fa-fw fa-home"></i>Welcome Back Admin</a>
+  <a  href="#"><i class="fa fa-fw fa-user"></i> Logout</a>
+</div>
+
+
+<div class="body">
+<span class="login100-form-title p-b-70" style='padding-top:50px;'>
+Choose A Project Category
+</span> 
+
+<input type="text" id="bookingtxt" onkeyup="myFunction()" placeholder="Search for booking number..." title="Type in booking number">
+<button id="bookingBtn">Search</button>
+
+ <div id="solutionProducts">
+   </div>
+
+
+
+
+</table>
+
+</div>
+
+<div class="Footer">
+
+
+</div>
+
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
