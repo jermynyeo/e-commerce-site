@@ -1,4 +1,4 @@
-# G8T7 - B.Y Solutions
+# B.Y Solutions
 
 We have separated our UI interface, HTTP Microservices and AMQP Microservices into different 
 AWS instances to reduce the CPU utilization of an instance, reducing latency when using our services. 
@@ -13,8 +13,8 @@ Also, use that approved email address to register for your customer account in o
 The PAYPAL Sandbox account credentials is provided below for your usage when making payment.
 
 --------MAILGUN API TO RECEIVE NOTIFICATIONS--------------------------
-Email: jermynyeo.2018@sis.smu.edu.sg
-Password: esdG8T7!!!
+Email: <email>
+Password: <password>
 Steps:
 1) Go to mailgun.com and login using the above credentials.
 2) Navigate to the left and under the Dashboard, click “Sending” > “Overview”
@@ -25,25 +25,19 @@ Steps:
 
 --------PAYPAL API--------------------------
 PayPal Sandbox Account ( to login for payment )
-Email: teachingteam@esd.com.sg
-Password: esdG8T7!
+Email: <email>
+Password: <password>
 
 ------------------ APPLICATION -------------------------
 To load our application for customers, head down to http://54.169.99.219/
 The admin/consultant console is available at http://54.169.99.219/admin.html
 
 Admin Account ( to login in the admin page )
-Username: admin
-Password: password
+Username: <email>
+Password: <password>
 
 **************************KONG****************************************
-
---------IP ADDRESS-------------------------
-KONG IP:http://13.250.108.137:1337
-
---------ACCOUNT----------------------------
-Username: admin
-Password: password
+Kong Gateway
 
 -----------------MICROSERVICE : PORTS------------------------------
 booking : 5250
@@ -55,9 +49,6 @@ product : 5150
 **************************AMQP****************************************
 To check our AMQP monitoring you will need an ubuntu terminal
 Using the G2T4_production key you can ssh into the instance and monitor the AMQP logs
-
---------IP ADDRESS------------------------
-AMQP IP: 18.138.255.13
 
 --------INSTRUCTIONS TO SSH--------------
 Copy the .pem file to your desktop and migrate it to your linux server. 
